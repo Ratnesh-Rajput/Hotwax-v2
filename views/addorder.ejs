@@ -8,11 +8,8 @@
 <body>
     <%- include("./partials/nav.ejs") %> 
     <div class="m-3">
-        <form action="/blog" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="coverImage" class="form-label">Cover  Image</label>
-                <input type="file" name="coverImage" class="form-control" id="coverImage" aria-describedby="emailHelp">
-            </div>
+        <form action="/order" method="post" enctype="multipart/form-data">
+            
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Title</label>
                 <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp">

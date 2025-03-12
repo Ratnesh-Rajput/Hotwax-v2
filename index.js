@@ -12,16 +12,15 @@ const PORT=8000;
 const app=express();
 
 
-//Connecting Database
 connectDB(process.env.MONGO_URL )
     .then(()=>{console.log("MongoDB connected")})
     .catch((err)=>{console.log(`Error connecting mongoDB:${err}` )})
 
-//Setting Views    
+ 
 app.set("view engine","ejs");
 app.set("views",path.resolve("./views"))
 
-//MiddleWare:
+
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(checkForAuthenticationCookie("token"));
